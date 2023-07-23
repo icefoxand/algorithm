@@ -4,17 +4,16 @@ from pprint import pprint
 
 def book_info(book, categories):
 
-    categoryId = book['categoryId']
-
+    categoryId = book['categoryId'] # print(type(categoryId))=<class 'list'>
     categoryName = []
 
-    for category in categories:
+    for category in categories: # print(type(category))=<class 'dict'>
         if category['id'] in categoryId:
             categoryName.append(category['name'])
 
     keys = ['id','title','author','priceSales','description','cover']
 
-    my_book_info = {}
+    my_book_info = {} # print(type(my_book_info))=<class 'dict'>
 
     for key in keys:
         my_book_info[key] = book[key]

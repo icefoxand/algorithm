@@ -1,27 +1,26 @@
 import json
 from pprint import pprint
 
+
 def books_info(books, categories):
 
-    result_of_book_info = []
+    my_books_info = []
     
-    for item_books in books:
-        new_dic = {}
-        key_list = ['id', 'title', 'author', 'priceSales', 'description', 'cover']
-        for key in key_list:
-            new_dic[key] = item_books[key]
-
-        categoryIds = item_books['categoryId']
+    for a_book in books:
+        new_dic_1 = {}
+        keys = ['id', 'title', 'author', 'priceSales', 'description', 'cover']
+        for key in keys:
+            new_dic_1[key] = a_book[key]
+        categoryIds = a_book['categoryId']
         categoryName = []
-        # #
         for category in categories:
             if category['id'] in categoryIds:
                 categoryName.append(category['name'])
+        new_dic_1['categoryName'] = categoryName
 
-        new_dic['categoryName'] = categoryName
-        result_of_book_info.append(new_dic)
+        my_books_info.append(new_dic_1)
 
-    return result_of_book_info
+    return my_books_info
         
 
 ##########################################################################
