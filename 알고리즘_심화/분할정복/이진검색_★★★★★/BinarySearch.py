@@ -5,7 +5,6 @@ arr.sort()
 low = 0             # 찾는 범위의 가장 작은 값이 갖는 인덱스값
 high = len(arr)-1   # 찾는 범위의 가장 큰 값이 갖는 인덱스값
 
-
 ## 반복문 버전
 def binary_search_iter(target):
     while low <= high: # 데이터를 못찾은 경우에, 계속 검색을 한다
@@ -23,7 +22,6 @@ def binary_search_iter(target):
 
 print(f'9 = {binary_search_iter(9)}')
 print(f'10 = {binary_search_iter(10)}')
-
 
 ## 재귀호출 버전
 def binary_search_recur(low, high, target):
