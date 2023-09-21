@@ -1,6 +1,7 @@
 # https://www.acmicpc.net/problem/1647 관련 백준문제
 # https://doing7.tistory.com/82 관련 블로그 설명
 # 0 ~ 9
+
 # make set: 집합을 만드는 과정
 parent = [i for i in range(10)]
 print(parent)
